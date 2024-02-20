@@ -1,5 +1,6 @@
 
-import HeaderWithNavbar from "./components/HeaderWithNavbar/HeaderWithNavbar"
+import Footer from "./components/Footer/Footer"
+import Header from "./components/Header/Header"
 
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
 
   return (
     <>
-      <HeaderWithNavbar/>
+      <Header/>
+      <Footer />
     </>
   )
 }
