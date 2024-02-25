@@ -43,7 +43,11 @@ const Home = () => {
           renderItem={(item, index) => (
             <List.Item>
               <List.Item.Meta
-                avatar={<Avatar>{index + 1}</Avatar>}
+                avatar={
+                  <Avatar className="bg-customBlueSecundary hover:bg-colorOrangeHover">
+                    {index + 1}
+                  </Avatar>
+                }
                 title={item.title}
               />
             </List.Item>

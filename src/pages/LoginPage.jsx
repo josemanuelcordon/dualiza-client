@@ -1,24 +1,35 @@
 import { useState } from "react";
-import {  validateUser } from "../api/usersApi";
+import { validateUser } from "../api/usersApi";
 
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../context/useAuthContext";
 
+import { Spin } from "antd";
+//<Spin />;
+
 const LoginPage = () => {
   const { login } = useAuthContext();
   const [userForm, setUserForm] = useState({});
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
 
   const navigate = useNavigate();
 
   async function hanleSubmit(e) {
     e.preventDefault();
-    const user = await validateUser(userForm)
-    if (user.login) {
-      login(user.username)
-      navigate("/")
-    } else {
-      setError("Usuario no encontrado, intentelo de nuevo.");
+    setLoading(true);
+    try {
+      const user = await validateUser(userForm);
+      setLoading(false);
+      if (user.login) {
+        login(user.username);
+        navigate("/");
+      } else {
+        setError("Usuario no encontrado, intentelo de nuevo.");
+      }
+    } catch (error) {
+      setLoading(false);
+      setError("Imposible logear");
     }
   }
 
@@ -105,12 +116,17 @@ const LoginPage = () => {
                 Contraseña olvidada?
               </a>
             </div>
-            {error && <p className=" text-red-500">Usuario o contraseña incorrecta</p>}
+            {error && (
+              <p className=" text-red-500">Usuario o contraseña incorrecta</p>
+            )}
             <button
-              className="w-full bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 text-white font-medium rounded-md text-sm py-2.5"
+              className={`w-full ${
+                loading ? "bg-gray-500" : "bg-blue-600 hover:bg-blue-700"
+              } focus:ring-4 focus:outline-none focus:ring-blue-300 text-white font-medium rounded-md text-sm py-2.5`}
               onClick={hanleSubmit}
+              disabled={loading}
             >
-              Inicar Sesion
+              {loading ? <Spin /> : "Inicar Sesion"}
             </button>
           </form>
         </div>
