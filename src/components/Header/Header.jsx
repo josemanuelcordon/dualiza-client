@@ -20,10 +20,10 @@ export default function Header() {
 
   return (
     <>
-      <header className="flex h-40 justify-around m-0 bg-customBlue">
-        <div className="flex items-center justify-between border-gray-400 py-8 col">
+      <header className="flex h-28 justify-between m-0 bg-customBlue">
+        <div className="mr-5">
           <a href="/">
-            <img src="./image/logo.png" alt="" width="150" />
+            <img className="h-full" src="./image/logo.png" alt="" />
           </a>
         </div>
         {isMobile ? (
