@@ -4,12 +4,12 @@ export const NavBar = () => {
   return (
     <div className="flex items-center justify-between text-2xl">
       <div className="hidden md:flex">
-        <a
-          href="#"
+        <Link
+          to="/"
           className="text-white px-4 py-2 hover:text-colorOrangeHover"
         >
           Proyecto
-        </a>
+        </Link>
 
         <a
           href="#"
@@ -31,13 +31,12 @@ export const NavBar = () => {
         >
           Noticias
         </a>
-
-        <a
-          href="#"
+        <Link
+          to="/contact"
           className="text-white px-4 py-2 hover:text-colorOrangeHover"
         >
           Contacto
-        </a>
+        </Link>
       </div>
     </div>
   );
