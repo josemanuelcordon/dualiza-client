@@ -8,13 +8,6 @@ export const NavBar = () => {
           href="#"
           className="text-white px-4 py-2 hover:text-colorOrangeHover"
         >
-          Principal
-        </a>
-
-        <a
-          href="#"
-          className="text-white px-4 py-2 hover:text-colorOrangeHover"
-        >
           Proyecto
         </a>
 
