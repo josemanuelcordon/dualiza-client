@@ -1,27 +1,37 @@
 import { useState } from "react";
-import { getUser } from "../api/usersApi";
-// import { useNavigate } from "react-router-dom";
+import {  validateUser } from "../api/usersApi";
+
+import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "../context/useAuthContext";
 
 const LoginPage = () => {
+  const { login } = useAuthContext();
   const [userForm, setUserForm] = useState({});
+  const [error, setError] = useState();
 
+  const navigate = useNavigate();
 
   async function hanleSubmit(e) {
     e.preventDefault();
-    await getUser(userForm);
+    const user = await validateUser(userForm)
+    if (user.login) {
+      login(user.username)
+      navigate("/")
+    } else {
+      setError("Usuario no encontrado, intentelo de nuevo.");
+    }
   }
 
-  getUser();
   return (
-    <section className="min-h-screen flex items-center justify-center bg-customBlue">
+    <section className="h-screen flex items-center justify-center bg-customBlue">
       <div className="max-w-md w-full bg-white rounded-lg shadow p-8">
         <a
           href="#"
-          className="flex items-center mb-6 text-2xl font-semibold text-gray-900"
+          className="flex items-center mb-6 text-3xl font-semibold text-gray-900"
         >
           <img
-            className="w-20 h-20 mr-2"
-            src="/image/logo.png"
+            className=" w-32 h-32 mr-2 "
+            src="/image/LogoLogin.png"
             alt="logo"
           />
           Dualiza
@@ -95,6 +105,7 @@ const LoginPage = () => {
                 Contraseña olvidada?
               </a>
             </div>
+            {error && <p className=" text-red-500">Usuario o contraseña incorrecta</p>}
             <button
               className="w-full bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 text-white font-medium rounded-md text-sm py-2.5"
               onClick={hanleSubmit}
