@@ -5,7 +5,9 @@ export default {
     extend: {
       colors: {
         customBlue: "#284D76",
+        customBlueSecundary: "#B3CBE6",
         colorOrangeHover: "#F28E63",
+        
       },
     },
   },
