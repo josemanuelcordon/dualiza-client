@@ -1,17 +1,11 @@
-
-import Footer from "./components/Footer/Footer"
-import Header from "./components/Header/Header"
-
+import LoginPage from "./pages/LoginPage";
 
 function App() {
-
-
   return (
     <>
-      <Header/>
-      <Footer />
+      <LoginPage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
