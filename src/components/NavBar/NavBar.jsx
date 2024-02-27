@@ -11,12 +11,12 @@ export const NavBar = () => {
           Proyecto
         </Link>
 
-        <a
-          href="#"
+        <Link
+          to="/resultadosobtenidos"
           className="text-white px-4 py-2 hover:text-colorOrangeHover"
         >
           Resultados obtenidos
-        </a>
+        </Link>
 
         <a
           href="#"
