@@ -1,14 +1,16 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext();
 
-export const AuthProvider = ({children}) => {
+export const AuthProvider = ({ children }) => {
   const [isLogged, setIsLogged] = useState(false);
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
 
   const login = (user) => {
     // Lógica de autenticación y configuración del usuario
     setUsername(user);
+
+    console.log(user);
   };
 
   const logout = () => {
@@ -18,7 +20,7 @@ export const AuthProvider = ({children}) => {
 
   return (
     <AuthContext.Provider
-      value={{ username, isLogged, login, logout }}
+      value={{ username, setUsername, isLogged, login, logout }}
     >
       {children}
     </AuthContext.Provider>
@@ -26,5 +28,5 @@ export const AuthProvider = ({children}) => {
 };
 
 export const useAuthContext = () => {
-    return useContext(AuthContext);
+  return useContext(AuthContext);
 };

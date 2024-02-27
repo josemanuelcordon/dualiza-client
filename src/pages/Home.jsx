@@ -1,6 +1,14 @@
 import { Avatar, List } from "antd";
+import { useEffect } from "react";
+import { useAuthContext } from "../context/useAuthContext";
 
 const Home = () => {
+  const { username } = useAuthContext();
+
+  useEffect(() => {
+    console.log(username);
+  }, []);
+
   const data = [
     {
       title: "Análisis del estado actual de los centros educativos",

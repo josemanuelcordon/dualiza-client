@@ -25,12 +25,12 @@ export const NavBar = () => {
           Mejora tu centro
         </a>
 
-        <a
-          href="/noticias"
+        <Link
+          to="/noticias"
           className="text-white px-4 py-2 hover:text-colorOrangeHover"
         >
           Noticias
-        </a>
+        </Link>
         <Link
           to="/contact"
           className="text-white px-4 py-2 hover:text-colorOrangeHover"

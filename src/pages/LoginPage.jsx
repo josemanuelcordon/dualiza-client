@@ -24,6 +24,7 @@ const LoginPage = () => {
       if (user.login) {
         login(user.username);
         navigate("/");
+        
       } else {
         setError("Usuario no encontrado, intentelo de nuevo.");
       }
