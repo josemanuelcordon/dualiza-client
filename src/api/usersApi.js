@@ -1,4 +1,4 @@
-const usersURL = "http://192.168.1.28:8000/user/api/users";
+const usersURL = "http://192.168.70.170:8000/user/api/users";
 
 export const validateUser = async (userForm) => {
   try {
