@@ -2,6 +2,7 @@ const usersURL = "http://192.168.70.170:8000/user/api/users";
 
 export const validateUser = async (userForm) => {
   try {
+    console.log(userForm);
     const response = await fetch(usersURL, {
       method: "POST",
       headers: {
