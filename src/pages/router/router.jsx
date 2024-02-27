@@ -5,6 +5,7 @@ import LoginPage from "../LoginPage";
 import Contact from "../Contact";
 import News from "../News";
 import ResultObtained from "../ResultObtained";
+import CreateNew from "../CreateNew";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
       },
       { path: "/noticias", element: <News /> },
       { path: "/resultadosobtenidos", element: <ResultObtained /> },
+      { path: "/create/new", element: <CreateNew /> },
     ],
   },
   {
