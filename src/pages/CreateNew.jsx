@@ -2,16 +2,16 @@ import { useState, useReducer } from "react";
 import { UploadOutlined } from "@ant-design/icons";
 import { Button, Upload, Divider } from "antd";
 import { publishNew } from "../api/usersApi";
+import { useAuthContext } from "../context/useAuthContext";
 
 const initialState = {
   title: "",
   subtitle: "",
   description: "",
-  date: "",
   source: "",
   user: "",
   tag: [],
-  img: "",
+  image: "",
   sections: [],
 };
 
@@ -47,11 +47,6 @@ const formReducer = (state, action) => {
         ...state,
         image: action.payload,
       };
-    case "SET_DATE":
-      return {
-        ...state,
-        date: Date.now(),
-      };
     case "ADD_SECTION":
       return {
         ...state,
@@ -71,10 +66,13 @@ const CreateNew = () => {
   const [sections, setSections] = useState([]);
   const [state, dispatch] = useReducer(formReducer, initialState);
 
+  const { username } = useAuthContext();
+
   async function handleSubmit(e) {
     e.preventDefault();
     dispatch({
-      type: "SET_DATE",
+      type: "SET_USER",
+      payload: username,
     });
     await publishNew(state);
   }
@@ -161,7 +159,7 @@ const CreateNew = () => {
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             required
             onChange={(e) =>
-              dispatch({ type: "SET_SOURCE", payload: e.target.value })
+              dispatch({ type: "SET_IMAGE", payload: e.target.value })
             }
           />
           <label

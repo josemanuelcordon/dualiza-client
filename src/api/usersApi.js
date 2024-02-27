@@ -1,4 +1,4 @@
-const usersURL = "http://192.168.70.170:8000/user/api/users";
+const usersURL = "http://localhost:8000/user/api/users";
 
 export const validateUser = async (userForm) => {
   try {
@@ -22,7 +22,7 @@ export const validateUser = async (userForm) => {
 
 export const getNews = async () => {
   try {
-    const response = await fetch("http://192.168.70.170:8000/news/api/news");
+    const response = await fetch("http://localhost:8000/news/api/news");
     const data = await response.json();
     return data;
   } catch (error) {
@@ -31,7 +31,7 @@ export const getNews = async () => {
 };
 
 export const publishNew = async (newData) => {
-  const response = await fetch("http://192.168.70.170:8000/news/new", {
+  const response = await fetch("http://localhost:8000/news/new", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
