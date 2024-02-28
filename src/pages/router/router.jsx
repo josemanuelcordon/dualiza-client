@@ -6,6 +6,7 @@ import Contact from "../Contact";
 import News from "../News";
 import ResultObtained from "../ResultObtained";
 import CreateNew from "../CreateNew";
+import New from "../New";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
         element: <Contact />,
       },
       { path: "/noticias", element: <News /> },
+      { path: "/noticia", element: <New /> },
       { path: "/resultadosobtenidos", element: <ResultObtained /> },
       { path: "/create/new", element: <CreateNew /> },
     ],
