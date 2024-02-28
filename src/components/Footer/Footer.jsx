@@ -1,4 +1,8 @@
+import { Link } from "react-router-dom";
+import { useAuthContext } from "../../context/useAuthContext";
+
 const Footer = () => {
+  const { username, setUsername } = useAuthContext();
   return (
     <footer className="bg-customBlueSecundary h-40 py-6">
       <div className="flex justify-start max-w-7xl mx-auto">
@@ -11,7 +15,16 @@ const Footer = () => {
           </div>
         </section>
         <section className="flex justify-end w-full">
-          <a href="/login">Zona de administración</a>
+          {username ? (
+            <p
+              className="hover:cursor-pointer hover:underline hover:text-colorOrangeHover "
+              onClick={() => setUsername("")}
+            >
+              Cerrar Sesión
+            </p>
+          ) : (
+            <Link to="/login">Zona de administración</Link>
+          )}
         </section>
       </div>
     </footer>

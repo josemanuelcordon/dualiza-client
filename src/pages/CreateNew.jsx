@@ -1,11 +1,10 @@
-import { useState, useReducer } from "react";
-import { UploadOutlined } from "@ant-design/icons";
-import { Button, Upload, Divider, message } from "antd";
+import { useReducer } from "react";
+import { Divider, message } from "antd";
 import { publishNew } from "../api/usersApi";
 import { useAuthContext } from "../context/useAuthContext";
 import { useNavigate } from "react-router-dom";
 
-const initialState = {
+let initialState = {
   title: "",
   subtitle: "",
   description: "",

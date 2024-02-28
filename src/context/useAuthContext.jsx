@@ -7,14 +7,10 @@ export const AuthProvider = ({ children }) => {
   const [username, setUsername] = useState("");
 
   const login = (user) => {
-    // Lógica de autenticación y configuración del usuario
     setUsername(user);
-
-    console.log(user);
   };
 
   const logout = () => {
-    // Lógica para cerrar sesión
     setIsLogged(false);
   };
 

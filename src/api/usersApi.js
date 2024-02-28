@@ -39,3 +39,13 @@ export const publishNew = async (newData, user) => {
     body: JSON.stringify(newData),
   });
 };
+
+export const deleteNew = async (idNew) => {
+  const response = await fetch(`http://localhost:8000/api/news/${idNew}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  return response.ok;
+};

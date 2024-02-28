@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../context/useAuthContext";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import { message } from "antd";
 import { useEffect, useState } from "react";
-import { getNews } from "../api/usersApi";
+import { deleteNew, getNews } from "../api/usersApi";
 
 const News = () => {
   const { username } = useAuthContext();
   const [news, setNews] = useState([]);
+  const [forceUpdate, setForceUpdate] = useState(false);
 
+  //Debe de ir en la carpeta utils
   const formatDate = (dateNotFormatted) => {
     const date = new Date(dateNotFormatted);
 
@@ -20,13 +23,22 @@ const News = () => {
     }${month}-${year}`;
   };
 
+  async function handleDelete(newId) {
+    const responseOk = await deleteNew(newId);
+    if (!responseOk) {
+      message.error("Error al borrar la noticia");
+    } else {
+      setForceUpdate(!forceUpdate);
+    }
+  }
+
   useEffect(() => {
     const fetchApi = async () => {
       const news = await getNews();
       setNews(news);
     };
     fetchApi();
-  }, []);
+  }, [forceUpdate]);
 
   return (
     <main className="min-h-[calc(100vh-160px-112px)] px-10 pb-10 max-w-7xl mx-auto flex flex-col items-center">
@@ -52,8 +64,11 @@ const News = () => {
               <div className="relative flex flex-col items-start h-full w-full ">
                 {username && (
                   <>
-                    <EditOutlined className="absolute top-4 right-4" />
-                    <DeleteOutlined className="absolute top-10 right-4" />
+                    <EditOutlined className="absolute top-4 right-4 hover:text-customBlueSecundary" />
+                    <DeleteOutlined
+                      onClick={() => handleDelete(n.id)}
+                      className="absolute top-10 right-4 hover:text-red-500"
+                    />
                   </>
                 )}
                 <Link

@@ -1,13 +1,8 @@
 import { Avatar, List } from "antd";
-import { useEffect } from "react";
 import { useAuthContext } from "../context/useAuthContext";
 
 const Home = () => {
   const { username } = useAuthContext();
-
-  useEffect(() => {
-    console.log(username);
-  }, []);
 
   const data = [
     {
@@ -52,7 +47,7 @@ const Home = () => {
             <List.Item>
               <List.Item.Meta
                 avatar={
-                  <Avatar className="bg-customBlueSecundary hover:bg-colorOrangeHover">
+                  <Avatar className="bg-customBlueSecundary hover:bg-colorOrangeHover flex justify-center items-center">
                     {index + 1}
                   </Avatar>
                 }
