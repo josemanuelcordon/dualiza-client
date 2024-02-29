@@ -49,3 +49,14 @@ export const deleteNew = async (idNew) => {
   });
   return response.ok;
 };
+
+export const sendEmail = async (email) => {
+  const response = await fetch(`http://localhost:8000/email/send`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(email),
+  });
+  return response.ok;
+};
