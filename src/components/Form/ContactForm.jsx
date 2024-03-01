@@ -1,4 +1,4 @@
-const Form = (props) => {
+const ContactForm = (props) => {
   const { dispatch, handleSubmit, state } = props;
 
   return (
@@ -74,4 +74,4 @@ const Form = (props) => {
   );
 };
 
-export default Form;
+export default ContactForm;

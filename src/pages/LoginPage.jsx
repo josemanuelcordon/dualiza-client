@@ -5,13 +5,12 @@ import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../context/useAuthContext";
 
 import { Spin } from "antd";
-//<Spin />;
 
 const LoginPage = () => {
   const { login } = useAuthContext();
   const [userForm, setUserForm] = useState({});
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState();
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
@@ -22,9 +21,8 @@ const LoginPage = () => {
       const user = await validateUser(userForm);
       setLoading(false);
       if (user.login) {
-        login(user.username);
+        login(user.username, user.admin);
         navigate("/");
-        
       } else {
         setError("Usuario no encontrado, intentelo de nuevo.");
       }

@@ -3,20 +3,22 @@ import { createContext, useContext, useEffect, useState } from "react";
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [isLogged, setIsLogged] = useState(false);
   const [username, setUsername] = useState("");
+  const [isAdmin, setIsAdmin] = useState(false);
 
-  const login = (user) => {
-    setUsername(user);
+  const login = (username, isAdmin) => {
+    setUsername(username);
+    setIsAdmin(isAdmin);
   };
 
   const logout = () => {
-    setIsLogged(false);
+    setUsername("");
+    setIsAdmin(false);
   };
 
   return (
     <AuthContext.Provider
-      value={{ username, setUsername, isLogged, login, logout }}
+      value={{ username, setUsername, isAdmin, login, logout }}
     >
       {children}
     </AuthContext.Provider>

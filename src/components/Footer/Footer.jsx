@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useAuthContext } from "../../context/useAuthContext";
 
 const Footer = () => {
-  const { username, setUsername } = useAuthContext();
+  const { username, logout, isAdmin } = useAuthContext();
   return (
     <footer className="bg-customBlueSecundary h-40 py-6">
       <div className="flex justify-start max-w-7xl mx-auto">
@@ -14,16 +14,39 @@ const Footer = () => {
             <img src="../image/CaixaBank.png" alt="" className="w-40" />
           </div>
         </section>
-        <section className="flex justify-end w-full">
+        <section className="flex flex-col items-end w-full">
           {username ? (
-            <p
-              className="hover:cursor-pointer hover:underline hover:text-colorOrangeHover "
-              onClick={() => setUsername("")}
-            >
-              Cerrar Sesión
-            </p>
+            <>
+              <p
+                className="hover:cursor-pointer hover:underline hover:text-colorOrangeHover "
+                onClick={() => logout()}
+              >
+                Cerrar Sesión
+              </p>
+              {isAdmin && (
+                <>
+                  <Link
+                    to="create/user"
+                    className="hover:cursor-pointer hover:underline hover:text-colorOrangeHover "
+                  >
+                    Crear Usuario
+                  </Link>
+                  <Link
+                    to="/list/users"
+                    className="hover:cursor-pointer hover:underline hover:text-colorOrangeHover "
+                  >
+                    Lista de usuarios
+                  </Link>
+                </>
+              )}
+            </>
           ) : (
-            <Link to="/login">Zona de administración</Link>
+            <Link
+              to="/login"
+              className="hover:cursor-pointer hover:underline hover:text-colorOrangeHover "
+            >
+              Zona de administración
+            </Link>
           )}
         </section>
       </div>
