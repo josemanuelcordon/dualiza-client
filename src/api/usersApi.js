@@ -1,4 +1,4 @@
-const usersURL = "http://localhost:8000/user/api/validate";
+const usersURL = "http://192.168.1.28:8000/user/api/validate";
 
 export const validateUser = async (userForm) => {
   try {
@@ -18,7 +18,7 @@ export const validateUser = async (userForm) => {
 
 export const getAllUsers = async () => {
   try {
-    const response = await fetch("http://localhost:8000/user/api/all");
+    const response = await fetch("http://192.168.1.28:8000/user/api/all");
     const data = await response.json();
     return data;
   } catch (error) {
@@ -28,7 +28,7 @@ export const getAllUsers = async () => {
 
 export const createUser = async (user) => {
   try {
-    const response = await fetch("http://localhost:8000/user/api/users", {
+    const response = await fetch("http://192.168.1.28:8000/user/api/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ export const createUser = async (user) => {
 };
 
 export const deleteUser = async (idUser) => {
-  const response = await fetch(`http://localhost:8000/api/news/${idUser}`, {
+  const response = await fetch(`http://192.168.1.28:8000/api/news/${idUser}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -52,7 +52,7 @@ export const deleteUser = async (idUser) => {
 
 export const getNews = async () => {
   try {
-    const response = await fetch("http://localhost:8000/news");
+    const response = await fetch("http://192.168.1.28:8000/news");
     const data = await response.json();
     return data;
   } catch (error) {
@@ -62,7 +62,7 @@ export const getNews = async () => {
 
 export const publishNew = async (newData, user) => {
   newData.user = user;
-  const response = await fetch("http://localhost:8000/news/new", {
+  const response = await fetch("http://192.168.1.28:8000/news/new", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -72,7 +72,7 @@ export const publishNew = async (newData, user) => {
 };
 
 export const deleteNew = async (idNew) => {
-  const response = await fetch(`http://localhost:8000/api/news/${idNew}`, {
+  const response = await fetch(`http://192.168.1.28:8000/api/news/${idNew}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -82,7 +82,7 @@ export const deleteNew = async (idNew) => {
 };
 
 export const sendEmail = async (email) => {
-  const response = await fetch(`http://localhost:8000/email/send`, {
+  const response = await fetch(`http://192.168.1.28:8000/email/send`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
