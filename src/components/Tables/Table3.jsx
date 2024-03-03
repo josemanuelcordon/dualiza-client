@@ -35,7 +35,6 @@ const data = [
 
 const Table3 = () => (
   <>
-    <h1>Electricidad</h1>
     <Table columns={columns} dataSource={data} pagination={false} />
   </>
 );

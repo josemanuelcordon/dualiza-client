@@ -21,24 +21,24 @@ export const NavBar = () => {
             Resultados obtenidos
           </Link>
           {/* Submenu */}
-          <ul className="absolute hidden mt-2 space-y-2 bg-white text-black group-hover:block">
+          <ul className="absolute hidden mt-2 space-y-2 bg-white text-black group-hover:block rounded-lg border border-gray-300 text-sm right-4">
             <li>
-              <Link to="/resultadosobtenidos/instalacion">
+              <Link to="/resultadosobtenidos/instalacion" className="block px-3 py-1 hover:bg-gray-100">
                 Instalación fotovoltáica
               </Link>
             </li>
             <li>
-              <Link to="/resultadosobtenidos/consumos">
+              <Link to="/resultadosobtenidos/consumos" className="block px-3 py-1 hover:bg-gray-100">
                 Consumos eléctricos
               </Link>
             </li>
             <li>
-              <Link to="/resultadosobtenidos/instclimatizacion">
-                Instalaciones de climaticación
+              <Link to="/resultadosobtenidos/instclimatizacion" className="block px-3 py-1 hover:bg-gray-100">
+                Instalaciones de climatización
               </Link>
             </li>
             <li>
-              <Link to="/resultadosobtenidos/mejoras">
+              <Link to="/resultadosobtenidos/mejoras" className="block px-3 py-1 hover:bg-gray-100">
                 Mejoras constructivas
               </Link>
             </li>
@@ -55,19 +55,19 @@ export const NavBar = () => {
           </Link>
 
           {/* Submenu */}
-          <ul className="absolute hidden mt-2 space-y-2 bg-white text-black group-hover:block">
+          <ul className="absolute hidden mt-2 space-y-2 bg-white text-black group-hover:block rounded-lg border border-gray-300 text-sm right-4">
             <li>
-              <Link to="/mejora/guia">
+              <Link to="/mejora/guia" className="block px-3 py-1 hover:bg-gray-100">
                 Guía de buenas prácticas
               </Link>
             </li>
             <li>
-              <Link to="/mejora/documentos">
+              <Link to="/mejora/documentos" className="block px-3 py-1 hover:bg-gray-100">
                 Documentos de interés
               </Link>
             </li>
             <li>
-              <Link to="/mejora/enlaces">
+              <Link to="/mejora/enlaces" className="block px-3 py-1 hover:bg-gray-100">
                 Enlaces
               </Link>
             </li>
