@@ -9,6 +9,7 @@ import CreateNew from "../CreateNew";
 import New from "../New";
 import CreateUser from "../CreateUser";
 import UserList from "../UserList";
+import ImproveCenter from "../ImproveCenter";
 
 export const router = createBrowserRouter([
   {
@@ -26,9 +27,11 @@ export const router = createBrowserRouter([
       { path: "/noticias", element: <News /> },
       { path: "/noticia", element: <New /> },
       { path: "/resultadosobtenidos", element: <ResultObtained /> },
+      { path: "/mejoracentro", element: <ImproveCenter /> },
       { path: "/create/new", element: <CreateNew /> },
       { path: "/create/user", element: <CreateUser /> },
       { path: "/list/users", element: <UserList /> },
+
     ],
   },
   {
