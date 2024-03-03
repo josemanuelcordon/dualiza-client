@@ -13,6 +13,8 @@ import Table11 from "../components/Tables/Table11";
 import Table12 from "../components/Tables/Table12";
 import Table13 from "../components/Tables/Table13";
 import Table14 from "../components/Tables/Table14";
+import BarChart from "../components/charts/BarChart";
+
 const ResultObtained = () => {
   return (
     // La medida del gráfico la controlas con el ancho del contenedor:
@@ -21,7 +23,6 @@ const ResultObtained = () => {
       <Radio />
       <Table1 />
       <Table2 />
-      {/* <BarChart/> */}
       <Table3 />
       <Table4 />
       <Table5 />

@@ -22,12 +22,11 @@ const data = {
   ],
 };
 
-
 const Radio = () => {
   return (
-    <div className="w-96">
+    <div className="w-96" id="4">
       <h1 className="text-center">Consumo de energía</h1>
-      <Pie data={data} width={1} />
+      <Pie data={data} width={1} id="radio" />
     </div>
   );
 };

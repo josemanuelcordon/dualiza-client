@@ -41,7 +41,7 @@ const BarChart = () => {
     <div style={{ maxWidth: "400px", margin: "auto" }}>
       {/* Ajusta el estilo del contenedor para centrar el gráfico */}
       <h1 className="text-center">Consumo de energía</h1>
-      <Bar data={data} options={options} />
+      <Bar data={data} options={options} id="4" />
     </div>
   );
 };
