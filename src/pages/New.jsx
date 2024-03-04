@@ -15,10 +15,13 @@ const New = () => {
       </h5>
       {pageNew.section.map((section, index) => (
         <div key={index} className="w-full flex items-center">
-          <h3>{section.title}</h3>
-          <p className="text-end text-opacity-10 first-letter:capitalize">
-            {section.description}
-          </p>
+          <div className="flex flex-wrap">
+            <h3>{section.title}</h3>
+            <p className="text-end text-opacity-10 first-letter:capitalize">
+              {section.description}
+            </p>
+          </div>
+
           <img className="float-start w-1/3" src={section.img} />
         </div>
       ))}

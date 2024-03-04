@@ -95,26 +95,6 @@ const LoginPage = () => {
                 required=""
               />
             </div>
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center">
-                <input
-                  id="remember"
-                  aria-describedby="remember"
-                  type="checkbox"
-                  className="w-4 h-4 border rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
-                  required=""
-                />
-                <label
-                  htmlFor="remember"
-                  className="ml-2 text-sm text-gray-500"
-                >
-                  Recordar
-                </label>
-              </div>
-              <a className="text-sm font-medium text-blue-600 hover:underline">
-                Contraseña olvidada?
-              </a>
-            </div>
             {error && (
               <p className=" text-red-500">Usuario o contraseña incorrecta</p>
             )}
