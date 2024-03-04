@@ -128,88 +128,92 @@ const InstalationClim = () => {
   return (
     <>
       <Grid>
-        <div style={{ gridColumn: "1 / -1" }}>
+        <div className="col-span-2">
           <Title>Instalación Eléctrica</Title>
         </div>
-        <Container>
-          <div className="p-4">
-            <Title>Descripción de las instalaciones</Title>
-            <Paragraph>
-              El edificio objeto del análisis más pormenorizado ha sido el
-              edificio C. En este edificio podemos encontrar diferentes equipos
-              de climatización y ventilación:
-            </Paragraph>
-            <List>
-              <ListItem>
-                Sistema de calefacción por radiadores con calderas de
-                condensación de gas natural.
-              </ListItem>
-              <ListItem>
-                Sistema de climatización con equipos de expansión directa en
-                oficinas y sala técnica donde se encuentra el rack informático.
-              </ListItem>
-              <ListItem>
-                Unidades de Tratamiento de aire (UTA’s) para asegurar la calidad
-                adecuada de aire por medios mecánicos. Hay dos unidades que
-                están conectadas al circuito de calefacción. Ambas poseen
-                recuperador de calor de flujo cruzado integrado, con un
-                rendimiento que puede oscilar entre 50% y 60%.
-              </ListItem>
-            </List>
-            <img src="/image/climatizacion.png" alt="" />
-            <MoreInfoButton onClick={toggleMoreInfo} className="m-4">
-              {showMoreInfo ? "Cerrar" : "Más información"}
-            </MoreInfoButton>
-            {showMoreInfo && (
-              <Overlay>
-                <ModalCard>
-                  <Title>Información adicional</Title>
-                  {/* Poner la imagen en chiquita, que no ocupe toa la pantalla*/}
-                  {/* <img src="/image/climatizacion.png" alt="" className="w-50 h-25" /> */}
-                  <Paragraph>
-                    En la instalación hay 5 circuitos, uno por planta y otro dos
-                    para alimentar a las UTAS’s. Cada uno funciona con una bomba
-                    circuladora independiente. Esta sectorización de la
-                    instalación permite que podamos activar o parar cada uno de
-                    los sistemas de bombeo, por lo tanto podamos seleccionar la
-                    planta a calefactar de manera independiente. Esta
-                    posibilidad de sectorización se debe tener en cuenta a la
-                    hora del análisis de los usos y de los consumos energéticos.
-                    Además, las bombas recirculadoras son modulantes, lo que las
-                    hace que puedan adaptarse a la hora de bombear el caudal
-                    solicitado por la instalación en función del número de
-                    estancias que demanden servicio de calefacción. Este aspecto
-                    hace que la instalación sea eficiente tanto desde el punto
-                    de vista de la producción de calor, como de su transporte a
-                    las unidades terminales . El sistema de control de la
-                    instalación es horario. Este control se realiza a través de
-                    un LOGO, donde se define el calendario escolar y el número
-                    de horas de funcionamiento de la instalación según la época
-                    del año. Una vez que la instalación está en marcha, ya
-                    entran en funcionamiento los termostato de zona. Los equipos
-                    de expansión directa son tipo split 1x1. Cada uno de ellos
-                    está situado en una zona y funciona de manera independiente
-                    controlado por su termostato. Este es el único sistema de
-                    climatización para verano. La gran mayoría de los equipos
-                    son de tecnología inverter. En los edificios A, B y D del
-                    centro disponen de una instalación con dos calderas de
-                    Gasóleo de 400kW que también funcionan en cascada. En este
-                    caso, no hay termostatos de zona, sino válvulas de reglaje
-                    programables para el control de la instalación en algunas
-                    aulas, básicamente las que tienen un menor horario de
-                    ocupación. Esta instalación no se va a definir con más
-                    detalle por no haberse estudiado en profundidad en este
-                    proyecto.
-                    <Paragraph></Paragraph>
-                  </Paragraph>
-                  <CloseButton onClick={toggleMoreInfo}>Cerrar</CloseButton>
-                </ModalCard>
-              </Overlay>
-            )}
-          </div>
-        </Container>
+        <div className="col-span-2">
+          <Container>
+            <div className="p-4">
+              <Title>Descripción de las instalaciones</Title>
+              <Paragraph>
+                El edificio objeto del análisis más pormenorizado ha sido el
+                edificio C. En este edificio podemos encontrar diferentes
+                equipos de climatización y ventilación:
+              </Paragraph>
+              <List>
+                <ListItem>
+                  Sistema de calefacción por radiadores con calderas de
+                  condensación de gas natural.
+                </ListItem>
+                <ListItem>
+                  Sistema de climatización con equipos de expansión directa en
+                  oficinas y sala técnica donde se encuentra el rack
+                  informático.
+                </ListItem>
+                <ListItem>
+                  Unidades de Tratamiento de aire (UTA’s) para asegurar la
+                  calidad adecuada de aire por medios mecánicos. Hay dos
+                  unidades que están conectadas al circuito de calefacción.
+                  Ambas poseen recuperador de calor de flujo cruzado integrado,
+                  con un rendimiento que puede oscilar entre 50% y 60%.
+                </ListItem>
+              </List>
+              <img src="/image/climatizacion.png" alt="" />
+              <MoreInfoButton onClick={toggleMoreInfo} className="m-4">
+                {showMoreInfo ? "Cerrar" : "Más información"}
+              </MoreInfoButton>
+              {showMoreInfo && (
+                <Overlay>
+                  <ModalCard>
+                    <Title>Información adicional</Title>
+                    {/* Poner la imagen en chiquita, que no ocupe toa la pantalla*/}
+                    {/* <img src="/image/climatizacion.png" alt="" className="w-50 h-25" /> */}
+                    <Paragraph>
+                      En la instalación hay 5 circuitos, uno por planta y otro
+                      dos para alimentar a las UTAS’s. Cada uno funciona con una
+                      bomba circuladora independiente. Esta sectorización de la
+                      instalación permite que podamos activar o parar cada uno
+                      de los sistemas de bombeo, por lo tanto podamos
+                      seleccionar la planta a calefactar de manera
+                      independiente. Esta posibilidad de sectorización se debe
+                      tener en cuenta a la hora del análisis de los usos y de
+                      los consumos energéticos. Además, las bombas
+                      recirculadoras son modulantes, lo que las hace que puedan
+                      adaptarse a la hora de bombear el caudal solicitado por la
+                      instalación en función del número de estancias que
+                      demanden servicio de calefacción. Este aspecto hace que la
+                      instalación sea eficiente tanto desde el punto de vista de
+                      la producción de calor, como de su transporte a las
+                      unidades terminales . El sistema de control de la
+                      instalación es horario. Este control se realiza a través
+                      de un LOGO, donde se define el calendario escolar y el
+                      número de horas de funcionamiento de la instalación según
+                      la época del año. Una vez que la instalación está en
+                      marcha, ya entran en funcionamiento los termostato de
+                      zona. Los equipos de expansión directa son tipo split 1x1.
+                      Cada uno de ellos está situado en una zona y funciona de
+                      manera independiente controlado por su termostato. Este es
+                      el único sistema de climatización para verano. La gran
+                      mayoría de los equipos son de tecnología inverter. En los
+                      edificios A, B y D del centro disponen de una instalación
+                      con dos calderas de Gasóleo de 400kW que también funcionan
+                      en cascada. En este caso, no hay termostatos de zona, sino
+                      válvulas de reglaje programables para el control de la
+                      instalación en algunas aulas, básicamente las que tienen
+                      un menor horario de ocupación. Esta instalación no se va a
+                      definir con más detalle por no haberse estudiado en
+                      profundidad en este proyecto.
+                      <Paragraph></Paragraph>
+                    </Paragraph>
+                    <CloseButton onClick={toggleMoreInfo}>Cerrar</CloseButton>
+                  </ModalCard>
+                </Overlay>
+              )}
+            </div>
+          </Container>
+        </div>
 
-        <Container>
+        <Container className="col-span-2">
           <div className="p-4">
             <Title>Análisis de los datos de consumo térmico </Title>
             <Paragraph>
@@ -247,92 +251,88 @@ const InstalationClim = () => {
           </div>
         </Container>
 
-        <div className="col-span-2">
-          <Container className="w-full">
-            <Title>Medidas de ahorro energético (MAEs)</Title>
-            <MoreInfoButton onClick={toggleMoreInfo2} className="m-4">
-              {showMoreInfo2
-                ? "Cerrar"
-                : "OPTIMIZACIÓN DE LA FACTURACIÓN DE GAS NATURAL"}
-            </MoreInfoButton>
-            {showMoreInfo2 && (
-              <Overlay>
-                <ModalCard>
-                  <Title>Información adicional</Title>
-                  <CloseButton onClick={toggleMoreInfo2}>Cerrar</CloseButton>
-                </ModalCard>
-              </Overlay>
-            )}
+        <Container className="col-span-2">
+          <Title>Medidas de ahorro energético (MAEs)</Title>
+          <MoreInfoButton onClick={toggleMoreInfo2} className="m-4">
+            {showMoreInfo2
+              ? "Cerrar"
+              : "OPTIMIZACIÓN DE LA FACTURACIÓN DE GAS NATURAL"}
+          </MoreInfoButton>
+          {showMoreInfo2 && (
+            <Overlay>
+              <ModalCard>
+                <Title>Información adicional</Title>
+                <CloseButton onClick={toggleMoreInfo2}>Cerrar</CloseButton>
+              </ModalCard>
+            </Overlay>
+          )}
 
-            <MoreInfoButton onClick={toggleMoreInfo3} className="m-4">
-              {showMoreInfo3
-                ? "Cerrar"
-                : "MANTENIMIENTOS PREVENTIVOS Y CORRECTIVOS EN LAS UTA"}
-            </MoreInfoButton>
-            {showMoreInfo3 && (
-              <Overlay>
-                <ModalCard>
-                  <Title>Información adicional</Title>
-                  <CloseButton onClick={toggleMoreInfo3}>Cerrar</CloseButton>
-                </ModalCard>
-              </Overlay>
-            )}
+          <MoreInfoButton onClick={toggleMoreInfo3} className="m-4">
+            {showMoreInfo3
+              ? "Cerrar"
+              : "MANTENIMIENTOS PREVENTIVOS Y CORRECTIVOS EN LAS UTA"}
+          </MoreInfoButton>
+          {showMoreInfo3 && (
+            <Overlay>
+              <ModalCard>
+                <Title>Información adicional</Title>
+                <CloseButton onClick={toggleMoreInfo3}>Cerrar</CloseButton>
+              </ModalCard>
+            </Overlay>
+          )}
 
-            <MoreInfoButton onClick={toggleMoreInfo4} className="m-4">
-              {showMoreInfo4
-                ? "Cerrar"
-                : "AHORRO EN CONSUMO ENERGÉTICO DE AIRE ACONDICIONADO"}
-            </MoreInfoButton>
-            {showMoreInfo4 && (
-              <Overlay>
-                <ModalCard>
-                  <Title>Información adicional</Title>
-                  <CloseButton onClick={toggleMoreInfo4}>Cerrar</CloseButton>
-                </ModalCard>
-              </Overlay>
-            )}
+          <MoreInfoButton onClick={toggleMoreInfo4} className="m-4">
+            {showMoreInfo4
+              ? "Cerrar"
+              : "AHORRO EN CONSUMO ENERGÉTICO DE AIRE ACONDICIONADO"}
+          </MoreInfoButton>
+          {showMoreInfo4 && (
+            <Overlay>
+              <ModalCard>
+                <Title>Información adicional</Title>
+                <CloseButton onClick={toggleMoreInfo4}>Cerrar</CloseButton>
+              </ModalCard>
+            </Overlay>
+          )}
 
-            <MoreInfoButton onClick={toggleMoreInfo5} className="m-4">
-              {showMoreInfo5
-                ? "Cerrar"
-                : "SUSTITUCIÓN O PERMUTA DEL EQUIPO AUTÓNOMO DE LA SALA DE RACK"}
-            </MoreInfoButton>
-            {showMoreInfo5 && (
-              <Overlay>
-                <ModalCard>
-                  <Title>Información adicional</Title>
-                  <CloseButton onClick={toggleMoreInfo5}>Cerrar</CloseButton>
-                </ModalCard>
-              </Overlay>
-            )}
+          <MoreInfoButton onClick={toggleMoreInfo5} className="m-4">
+            {showMoreInfo5
+              ? "Cerrar"
+              : "SUSTITUCIÓN O PERMUTA DEL EQUIPO AUTÓNOMO DE LA SALA DE RACK"}
+          </MoreInfoButton>
+          {showMoreInfo5 && (
+            <Overlay>
+              <ModalCard>
+                <Title>Información adicional</Title>
+                <CloseButton onClick={toggleMoreInfo5}>Cerrar</CloseButton>
+              </ModalCard>
+            </Overlay>
+          )}
 
-            <MoreInfoButton onClick={toggleMoreInfo6} className="m-4">
-              {showMoreInfo6
-                ? "Cerrar"
-                : "INSTALACIÓN DE ENERGÍA SOLAR TÉRMICA"}
-            </MoreInfoButton>
-            {showMoreInfo6 && (
-              <Overlay>
-                <ModalCard>
-                  <Title>Información adicional</Title>
-                  <CloseButton onClick={toggleMoreInfo6}>Cerrar</CloseButton>
-                </ModalCard>
-              </Overlay>
-            )}
+          <MoreInfoButton onClick={toggleMoreInfo6} className="m-4">
+            {showMoreInfo6 ? "Cerrar" : "INSTALACIÓN DE ENERGÍA SOLAR TÉRMICA"}
+          </MoreInfoButton>
+          {showMoreInfo6 && (
+            <Overlay>
+              <ModalCard>
+                <Title>Información adicional</Title>
+                <CloseButton onClick={toggleMoreInfo6}>Cerrar</CloseButton>
+              </ModalCard>
+            </Overlay>
+          )}
 
-            <MoreInfoButton onClick={toggleMoreInfo7} className="m-4">
-              {showMoreInfo7 ? "Cerrar" : "INSTALACIÓN ELÉCTRICA"}
-            </MoreInfoButton>
-            {showMoreInfo7 && (
-              <Overlay>
-                <ModalCard>
-                  <Title>Información adicional</Title>
-                  <CloseButton onClick={toggleMoreInfo7}>Cerrar</CloseButton>
-                </ModalCard>
-              </Overlay>
-            )}
-          </Container>
-        </div>
+          <MoreInfoButton onClick={toggleMoreInfo7} className="m-4">
+            {showMoreInfo7 ? "Cerrar" : "INSTALACIÓN ELÉCTRICA"}
+          </MoreInfoButton>
+          {showMoreInfo7 && (
+            <Overlay>
+              <ModalCard>
+                <Title>Información adicional</Title>
+                <CloseButton onClick={toggleMoreInfo7}>Cerrar</CloseButton>
+              </ModalCard>
+            </Overlay>
+          )}
+        </Container>
       </Grid>
     </>
   );

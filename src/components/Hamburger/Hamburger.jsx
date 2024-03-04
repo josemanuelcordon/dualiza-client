@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 export const Hamburger = ({ isNavOpen, setIsNavOpen }) => {
   return (
     <nav>
-      <section className="MOBILE-MENU flex flex-col items-center justify-center lg:hidden h-full">
+      <section className="MOBILE-MENU flex flex-col items-center justify-center lg:hidden h-full px-6">
         <div
           className="HAMBURGER-ICON  space-y-2"
           onClick={() => setIsNavOpen((prev) => !prev)}
@@ -26,56 +28,53 @@ export const Hamburger = ({ isNavOpen, setIsNavOpen }) => {
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </div>
-          <ul className="flex flex-col items-center justify-between min-h-[250px]">
-            <li className="border-b border-gray-400 my-8 uppercase">
-              <a
-                href="#"
-                className="text-black  px-4 py-2 hover:text-colorOrangeHover"
-              >
-                Principal
-              </a>
-            </li>
-            <li className="border-b border-gray-400 my-8 uppercase">
-              <a
-                href="#"
-                className="text-black px-4 py-2 hover:text-colorOrangeHover"
-              >
+          <section className="flex flex-col items-center justify-between min-h-[250px]">
+            <Link
+              to=""
+              className="border-b border-gray-400 my-8 uppercase"
+              onClick={() => setIsNavOpen(false)}
+            >
+              <span className="text-black px-4 py-2 hover:text-colorOrangeHover">
                 Proyecto
-              </a>
-            </li>
-            <li className="border-b border-gray-400 my-8 uppercase">
-              <a
-                href="#"
-                className="text-black px-4 py-2 hover:text-colorOrangeHover"
-              >
+              </span>
+            </Link>
+            <Link
+              to="/resultadosobtenidos"
+              className="border-b border-gray-400 my-8 uppercase"
+              onClick={() => setIsNavOpen(false)}
+            >
+              <span className="text-black px-4 py-2 hover:text-colorOrangeHover">
                 Resultados obtenidos
-              </a>
-            </li>
-            <li className="border-b border-gray-400 my-8 uppercase">
-              <a
-                href="#"
-                className="text-black px-4 py-2 hover:text-colorOrangeHover"
-              >
+              </span>
+            </Link>
+            <Link
+              to="/mejoracentro"
+              className="border-b border-gray-400 my-8 uppercase"
+              onClick={() => setIsNavOpen(false)}
+            >
+              <span className="text-black px-4 py-2 hover:text-colorOrangeHover">
                 Mejora tu centro
-              </a>
-            </li>
-            <li className="border-b border-gray-400 my-8 uppercase">
-              <a
-                href="#"
-                className="text-black px-4 py-2 hover:text-colorOrangeHover"
-              >
+              </span>
+            </Link>
+            <Link
+              to="/noticias"
+              className="border-b border-gray-400 my-8 uppercase"
+              onClick={() => setIsNavOpen(false)}
+            >
+              <span className="text-black px-4 py-2 hover:text-colorOrangeHover">
                 Noticias
-              </a>
-            </li>
-            <li className="border-b border-gray-400 my-8 uppercase">
-              <a
-                href="#"
-                className="text-black px-4 py-2 hover:text-colorOrangeHover"
-              >
+              </span>
+            </Link>
+            <Link
+              to="/contact"
+              className="border-b border-gray-400 my-8 uppercase"
+              onClick={() => setIsNavOpen(false)}
+            >
+              <span className="text-black px-4 py-2 hover:text-colorOrangeHover">
                 Contacto
-              </a>
-            </li>
-          </ul>
+              </span>
+            </Link>
+          </section>
         </div>
       </section>
     </nav>

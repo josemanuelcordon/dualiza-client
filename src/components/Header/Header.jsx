@@ -4,11 +4,11 @@ import { NavBar } from "../NavBar/NavBar";
 
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1300);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 900);
+      setIsMobile(window.innerWidth < 1300);
     };
 
     window.addEventListener("resize", handleResize);
