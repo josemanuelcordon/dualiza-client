@@ -1,5 +1,62 @@
+import styled from "styled-components";
+
+const Subtitle = styled.h2`
+  margin: 10px auto;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #555;
+`;
+
+const Card = styled.div`
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-right: 16px;
+  flex: 1;
+`;
+
+const StyledList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const ListItem = styled.li`
+  margin-bottom: 8px;
+`;
+
+
+
 const ContactForm = (props) => {
   const { dispatch, handleSubmit, state } = props;
+
+  const departamentosHLanz = [
+    {
+      nombre: 'Dpto. Instalación y Mantenimiento',
+      responsable: 'Maria Dolores Sáenz Pajares',
+      email: 'msaepaj412@g.educaand.es',
+    },
+  ];
+
+  const departamentosAlBaytar = [
+    {
+      nombre: 'Dpto. Instalación y Mantenimiento',
+      responsable: 'David Racero',
+      email: 'dracpat976@g.educaand.es',
+    },
+  ];
+
+  const departamentosCFIPVirgen = [
+    {
+      nombre: 'Dpto. Energía y Agua',
+      responsable: 'Raúl Morales Ocaña',
+      email: 'rmo14@educastillalamancha.es',
+    },
+  ];
+
+  
 
   return (
     <>
@@ -73,9 +130,42 @@ const ContactForm = (props) => {
         </button>
       </form>
 
-      <p>IES H. Lanz</p>
-      <p>IES </p>
-      <p>IES</p>
+  <div className="container mx-auto mt-8">
+      <StyledList>
+        <Card>
+          <Subtitle>IES POLITÉCNICO HERMENEGILDO LANZ</Subtitle>
+          {departamentosHLanz.map((departamento, index) => (
+            <ListItem key={index}>
+              <h2 className="text-m font-semibold">{departamento.nombre}</h2>
+              <p className="text-gray-600">{`Responsable: ${departamento.responsable}`}</p>
+              <p className="text-blue-500">{`Email: ${departamento.email}`}</p>
+            </ListItem>
+          ))}
+        </Card>
+
+        <Card>
+          <Subtitle>IES AL-BAYTAR</Subtitle>
+          {departamentosAlBaytar.map((departamento, index) => (
+            <ListItem key={index}>
+              <h2 className="text-m font-semibold">{departamento.nombre}</h2>
+              <p className="text-gray-600">{`Responsable: ${departamento.responsable}`}</p>
+              <p className="text-blue-500">{`Email: ${departamento.email}`}</p>
+            </ListItem>
+          ))}
+        </Card>
+
+        <Card>
+          <Subtitle>CIFP VIRGEN DE GRACIA</Subtitle>
+          {departamentosCFIPVirgen.map((departamento, index) => (
+            <ListItem key={index}>
+              <h2 className="text-m font-semibold">{departamento.nombre}</h2>
+              <p className="text-gray-600">{`Responsable: ${departamento.responsable}`}</p>
+              <p className="text-blue-500">{`Email: ${departamento.email}`}</p>
+            </ListItem>
+          ))}
+        </Card>
+      </StyledList>
+    </div>
     </>
   );
 };

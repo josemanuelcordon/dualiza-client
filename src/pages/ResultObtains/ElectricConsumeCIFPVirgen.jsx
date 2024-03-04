@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import Radio from '../../components/charts/Radio';
 import Table1 from '../../components/Tables/Table1';
 import Table2 from '../../components/Tables/Table2';
 import Table3 from '../../components/Tables/Table3';
+import Table4 from '../../components/Tables/Table4';
 
 const GridHLanz = styled.div`
   display: grid;
@@ -28,21 +28,28 @@ const Paragraph = styled.p`
   line-height: 1.5;
 `;
 
-const ResultObtained = () => {
-
+const ElectricConsumeCIFPVirgen = () => {
   return (
-    <GridHLanz>
+     <GridHLanz>
       <Title>Consumo eléctrico</Title>
-
-      {/* Radio Chart */}
-      <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden">
-        <div className="p-4">
-          <Radio />
+      <div style={{ gridColumn: '1 / -1' }}>
+            <Paragraph>
+                La instalación eléctrica del centro consiste en tres acometidas independientes, las cuales suministran energía a las tres partes del centro.
+                Todos ellos están regidos por tarifas de tipo 3.0A, siendo la empresa comercializadora GBP (Global Biosfera Protect). 
+                En este caso los focos de consumo son el sistema de iluminación, los equipos de ofimática, el sistema de calefacción y otros consumos. 
+                De cada foco de consumo se va a realizar una breve introducción y posteriormente se va a mostrar unas tablas con los resultados obtenidos tras 
+                el análisis de los distintos consumos. 
+            </Paragraph>
         </div>
+      {/* Table4 */}
+      <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden">
+        <h2 className="text-lg font-semibold m-2">Sistemas de iluminación</h2>
         <Paragraph>
-          Los principales focos de consumo eléctrico están presentes en receptores como ordenadores, monitores, altavoces, impresoras, proyectores, 
-          equipos de iluminación, equipos de climatización y ventilación colectiva, split y radiadores eléctricos, principalmente.
+            La instalación de iluminación interior está formada, en su mayoría, por lámparas LED aunque en ciertas zonas de poca afluencia hay instaladas lámparas fluorescentes.  
         </Paragraph>
+        <div className="p-4">
+          <Table4 />
+        </div>
       </div>
 
       {/* Table1 */}
@@ -70,8 +77,7 @@ const ResultObtained = () => {
       </div>
     </GridHLanz>
 
-    
-  );
-};
+  )
+}
 
-export default ResultObtained;
+export default ElectricConsumeCIFPVirgen

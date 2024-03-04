@@ -45,6 +45,7 @@ const Contact = () => {
         dispatch={dispatch}
         state={state}
       />
+      
     </main>
   );
 };
