@@ -27,7 +27,7 @@ const Paragraph = styled.p`
 const ImrpoveConstructive = () => {
   return (
     <GridHLanz>
-      <Title>Consumo eléctrico IES Hermenegildo Lanz</Title>
+      <Title></Title>
 
       {/* Text 1 */}
       <div className="w-full py-2 my-2 bg-white shadow-md rounded-md overflow-hidden">
