@@ -1,8 +1,11 @@
 import styled from 'styled-components';
-import Table1 from '../../components/Tables/Table1';
-import Table2 from '../../components/Tables/Table2';
-import Table3 from '../../components/Tables/Table3';
+import Table5 from '../../components/Tables/Table5';
+import Table6 from '../../components/Tables/Table6';
+import Table7 from '../../components/Tables/Table7';
 import Table4 from '../../components/Tables/Table4';
+import Table8 from '../../components/Tables/Table8';
+import Table9 from '../../components/Tables/Table9';
+import Table10 from '../../components/Tables/Table10';
 
 const GridHLanz = styled.div`
   display: grid;
@@ -52,29 +55,44 @@ const ElectricConsumeCIFPVirgen = () => {
         </div>
       </div>
 
-      {/* Table1 */}
+      {/* Table5 */}
       <div className="bg-white shadow-md rounded-md overflow-hidden max-w-md max-h-fit">
-        <h2 className="text-lg font-semibold m-2">Parámetros contratados</h2>
+        <h2 className="text-lg font-semibold m-2">Ofimática</h2>
+        <Paragraph>
+            El centro cuenta con una elevada cantidad de ordenadores, proyectores e impresoras. Durante la visita para la auditoría la mayoría de las aulas con ordenadores estaban vacías, por lo que los equipos estaban apagados, pero un detalle a tener en cuenta de cara a posibles mejoras es que muchos monitores (≈60%) tenían el piloto de standby encendido. En cuanto a los equipos de impresión se encuentran principalmente en despachos y en departamentos del profesorado, así como las fotocopiadoras se encuentran en la sala de profesores y conserjería. 
+        </Paragraph>
         <div className="p-4">
-          <Table1 />
+          <Table5 />
         </div>
       </div>
 
-      {/* Table2 */}
+      {/* Table6 */}
       <div className="col-span-2 max-w-full bg-white shadow-md rounded-md overflow-hidden">
-        <h2 className="text-lg font-semibold p-4">El consumo y coste eléctrico anual. Periodo 01/10/2018 - 30/09/2019</h2>
+        <h2 className="text-lg font-semibold p-4">Otros equipos eléctricos</h2>
         <div className="p-4">
-          <Table2 />
+          <Table6 />
         </div>
       </div>
 
-      {/* Table3 */}
+      {/* Table7 */}
       <div className="col-span-2 max-w-full bg-white shadow-md rounded-md overflow-hidden">
-        <h2 className="text-lg font-semibold p-4">El consumo y coste eléctrico anual global.</h2>
+        <h2 className="text-lg font-semibold p-4">Resumen con la potencia instalada en los diferentes sistemas que han sido analizados</h2>
         <div className="p-4">
-          <Table3 />
+          <Table7 />
         </div>
       </div>
+
+      {/* Table8 , Table9 , Table10 */}
+      <div className="col-span-2 max-w-full bg-white shadow-md rounded-md overflow-hidden">
+        <h2 className="text-lg font-semibold p-4">Tarifa contratada para cada cuadro eléctrico</h2>
+        <div className="p-4">
+          <Table8 />
+          <Table9 />
+          <Table10 />
+        </div>
+      </div>
+
+      
     </GridHLanz>
 
   )

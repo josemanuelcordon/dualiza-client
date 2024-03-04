@@ -83,7 +83,6 @@ const data = [
 
 const Table6 = () => (
  <>
-   <h1>Potencia eléctrica de otros equipos</h1>
    <Table columns={columns} dataSource={data} pagination={false} />
  </>
 );

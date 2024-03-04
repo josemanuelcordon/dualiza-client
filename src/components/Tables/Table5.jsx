@@ -79,8 +79,7 @@ const data = [
 
 const Table5 = () => (
   <>
-    <h1>Potencia total ofimática por planta</h1>
-    <Table columns={columns} dataSource={data} pagination={false} />
+     <Table columns={columns} dataSource={data} pagination={false} />
   </>
 );
 

@@ -48,7 +48,7 @@ const data = [
 
 const Table10 = () => (
   <>
-    <h1>Potencia eléctrica instalada</h1>
+    <h2 className="text-m font-semibold p-4">Cuadro electrico 3</h2>
     <Table columns={columns} dataSource={data} pagination={false} />
   </>
 );

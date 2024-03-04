@@ -73,7 +73,6 @@ const data = [
 
 const Table4 = () => (
   <>
-    <h1>Iluminación</h1>
     <Table columns={columns} dataSource={data} pagination={false} />
   </>
 );
