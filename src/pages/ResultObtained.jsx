@@ -1,40 +1,44 @@
-import Table5 from "../components/Tables/Table5";
-import Table1 from "../components/Tables/Table1";
-import Table2 from "../components/Tables/Table2";
-import Table3 from "../components/Tables/Table3";
-import Table4 from "../components/Tables/Table4";
-import Radio from "../components/charts/Radio";
-import Table6 from "../components/Tables/Table6";
-import Table7 from "../components/Tables/Table7";
-import Table8 from "../components/Tables/Table8";
-import Table9 from "../components/Tables/Table9";
-import Table10 from "../components/Tables/Table10";
-import Table11 from "../components/Tables/Table11";
-import Table12 from "../components/Tables/Table12";
-import Table13 from "../components/Tables/Table13";
-import Table14 from "../components/Tables/Table14";
+import InstalationFoto from "./ResultObtains/InstalationFoto";
+import IESHLanz from "./IESHLanz";
+import CIFPVirgen from "./CIFPVirgen";
+import ImrpoveConstructive from "./ResultObtains/ImrpoveConstructive";
+import { Tabs } from "antd";
+
+const onChange = (key) => {
+  console.log(key);
+};
+const items = [
+  {
+    key: "1",
+    label: "Instalación fotovoltaica",
+    children: <InstalationFoto />,
+  },
+  {
+    key: "2",
+    label: "IES Hermenegildo Lanz",
+    children: <IESHLanz />,
+  },
+  {
+    key: "3",
+    label: "CIFP Virgen de Gracia",
+    children: <CIFPVirgen />,
+  },
+   {
+    key: "4",
+    label: "Mejoras Constructivas",
+    children: <ImrpoveConstructive />,
+  },
+];
 
 const ResultObtained = () => {
   return (
-    // La medida del gráfico la controlas con el ancho del contenedor:
-    // Aqui te dejo el link con los diferentes tipos de gráficos https://react-chartjs-2.js.org/components
-    <div className="min-h-[calc(100vh-160px-112px)] px-10 pb-10 mx-auto flex flex-col justify-center items-center gap-10">
-      <Radio />
-      <Table1 />
-      <Table2 />
-      <Table3 />
-      <Table4 />
-      <Table5 />
-      <Table6 />
-      <Table7 />
-      <Table8 />
-      <Table9 />
-      <Table10 />
-      <Table11 />
-      <Table12 />
-      <Table13 />
-      <Table14 />
-    </div>
+    <main className="min-h-[calc(100vh-160px-112px)] px-10 pb-10  max-w-5xl mx-auto flex flex-col">
+      <section className="flex items-end w-full px-10 pt-20 pb-10 bg-gray-600 text-white justify-between">
+        <h1 className="text-6xl text-start">Resultados obtenidos</h1>
+      </section>
+      <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+    </main>
+
   );
 };
 

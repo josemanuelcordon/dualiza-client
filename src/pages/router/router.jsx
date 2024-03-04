@@ -10,10 +10,6 @@ import New from "../New";
 import CreateUser from "../CreateUser";
 import UserList from "../UserList";
 import ImproveCenter from "../ImproveCenter";
-import InstalationFoto from "../ResultObtains/InstalationFoto";
-import ElectricConsume from "../ResultObtains/ElectricConsume";
-import ImrpoveConstructive from "../ResultObtains/ImrpoveConstructive";
-import InstalationClim from "../ResultObtains/InstalationClim";
 
 export const router = createBrowserRouter([
   {
@@ -31,10 +27,6 @@ export const router = createBrowserRouter([
       { path: "/noticias", element: <News /> },
       { path: "/noticia", element: <New /> },
       { path: "/resultadosobtenidos", element: <ResultObtained /> },
-      { path: "/resultadosobtenidos/instalacion", element: <InstalationFoto /> },
-      { path: "/resultadosobtenidos/consumos", element: <ElectricConsume /> },
-      { path: "/resultadosobtenidos/instclimatizacion", element: <InstalationClim/> },
-      { path: "/resultadosobtenidos/mejoras", element: <ImrpoveConstructive /> },
       { path: "/mejoracentro", element: <ImproveCenter /> },
       { path: "/create/new", element: <CreateNew /> },
       { path: "/create/user", element: <CreateUser /> },

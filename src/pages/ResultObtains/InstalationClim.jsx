@@ -29,13 +29,6 @@ const Title = styled.h1`
   margin: 20px;
 `;
 
-const Subtitle = styled.h2`
-  text-align: center;
-  font-size: 1.5rem;
-  color: #555;
-  margin-bottom: 10px;
-`;
-
 const Paragraph = styled.p`
   margin: 20px;
   font-size: 0.9rem;
@@ -136,6 +129,9 @@ const InstalationClim = () => {
   return (
     <>
     <Grid>
+      <div style={{ gridColumn: '1 / -1' }}>
+          <Title>Instalación Eléctrica</Title>
+        </div>
     <Container>
       <div className="p-4">
         <Title>Descripción de las instalaciones</Title>
@@ -222,8 +218,8 @@ const InstalationClim = () => {
 
 
 
-        <div className='span-col-2 max-w-full'>
-      <Container >
+        <div style={{ gridColumn: '1 / -1' }}>
+      <Container style={{ gridColumn: '1 / -1' }}>
           <Title>Medidas de ahorro energético (MAEs)</Title>            
           <MoreInfoButton onClick={toggleMoreInfo2} className='m-4'>
             {showMoreInfo2 ? "Cerrar" : "OPTIMIZACIÓN DE LA FACTURACIÓN DE GAS NATURAL"}
