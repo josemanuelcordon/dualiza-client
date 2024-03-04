@@ -37,6 +37,12 @@ const Footer = () => {
                   >
                     Lista de usuarios
                   </Link>
+                  <Link
+                    to="/config"
+                    className="hover:cursor-pointer hover:underline hover:text-colorOrangeHover "
+                  >
+                    Configuración de correo
+                  </Link>
                 </>
               )}
             </>

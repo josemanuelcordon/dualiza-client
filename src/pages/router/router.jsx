@@ -11,6 +11,7 @@ import CreateUser from "../CreateUser";
 import UserList from "../UserList";
 import ImproveCenter from "../ImproveCenter";
 import ProtectedRoute from "../../utils/ProtectedRoute";
+import EmailConfig from "../../components/EmailConfig";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,7 @@ export const router = createBrowserRouter([
           { path: "/list/users", element: <UserList /> },
         ],
       },
+      { path: "/config", element: <EmailConfig /> },
     ],
   },
   {

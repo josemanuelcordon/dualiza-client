@@ -91,3 +91,14 @@ export const sendEmail = async (email) => {
   });
   return response.ok;
 };
+
+export const changeConfig = async (config) => {
+  const response = await fetch(`http://localhost:8000/email/config`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(config),
+  });
+  return response.ok;
+};
