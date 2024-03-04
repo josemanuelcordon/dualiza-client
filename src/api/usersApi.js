@@ -41,7 +41,7 @@ export const createUser = async (user) => {
 };
 
 export const deleteUser = async (idUser) => {
-  const response = await fetch(`http://localhost:8000/api/user/${idUser}`, {
+  const response = await fetch(`http://localhost:8000/api/users/${idUser}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",

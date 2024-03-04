@@ -2,7 +2,6 @@ import { Avatar, List } from "antd";
 import { useAuthContext } from "../context/useAuthContext";
 
 const Home = () => {
-  const { username } = useAuthContext();
 
   const data = [
     {

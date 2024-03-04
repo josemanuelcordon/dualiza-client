@@ -1,4 +1,6 @@
+import { Divider } from "antd";
 import { useLocation } from "react-router-dom";
+import formatDate from "../utils/formatDate";
 
 const New = () => {
   const { state } = useLocation();
@@ -9,21 +11,30 @@ const New = () => {
         <h1 className="text-6xl text-start">{pageNew.title}</h1>
       </section>
       <img src={pageNew.img} />
-      <p className="text-end text-opacity-10">{pageNew.date}</p>
+      <p className="text-end text-opacity-10">{formatDate(pageNew.date)}</p>
       <h5 className="mt-4 text-xl first-letter:capitalize first-letter:text-4xl">
         {pageNew.description}
       </h5>
       {pageNew.section.map((section, index) => (
-        <div key={index} className="w-full flex items-center">
-          <div className="flex flex-wrap">
-            <h3>{section.title}</h3>
-            <p className="text-end text-opacity-10 first-letter:capitalize">
-              {section.description}
-            </p>
-          </div>
+        <>
+          <div key={index} className="w-full flex items-center">
+            <div className="w-2/3">
+              <div>
+                <h3 className="first-letter:capitalize text-2xl underline">{section.title}</h3>
+              </div>
 
-          <img className="float-start w-1/3" src={section.img} />
-        </div>
+              <div>
+                <p className="text-opacity-10 first-letter:capitalize mt-10">
+                  {section.description}
+                </p>
+              </div>
+            </div>
+            <div className="w-1/3">
+              <img className="w-full h-auto" src={section.img} />
+            </div>
+          </div>
+          <Divider />
+        </>
       ))}
     </main>
   );

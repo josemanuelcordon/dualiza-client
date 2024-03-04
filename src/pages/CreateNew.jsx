@@ -60,7 +60,6 @@ const formReducer = (state, action) => {
         section: [...state.section.slice(1, state.section.length)],
       };
     case "UPDATE_SECTION":
-      console.log(state);
       return {
         ...state,
         section: state.section.map((sect, index) => {
@@ -122,7 +121,6 @@ const CreateNew = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      console.log(state);
       await publishNew(state, username);
       navigate("/noticias");
     } catch (error) {

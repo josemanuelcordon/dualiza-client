@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
-import { getAllUsers } from "../api/usersApi";
-import { DeleteOutlined } from "@ant-design/icons";
+import { deleteUser, getAllUsers } from "../api/usersApi";
 import { Card, Button } from "antd";
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
+  const [forceUpdate, setForceUpdate] = useState(false);
+
+  const handleDelete = async (e, userId) => {
+    e.preventDefault;
+    await deleteUser(userId);
+    setForceUpdate((prev) => !prev);
+  };
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -12,7 +18,7 @@ const UserList = () => {
       setUsers(response);
     };
     fetchApi();
-  }, []);
+  }, [forceUpdate]);
   return (
     <main className="min-h-[calc(100vh-160px-112px)] px-10 pb-10  max-w-5xl mx-auto flex flex-col">
       <section className="flex items-end w-full px-10 pt-20 pb-10 mb-10 rounded-b-xl bg-gray-600 text-white justify-between">
@@ -25,8 +31,10 @@ const UserList = () => {
             type="inner"
             title={user.username}
             extra={
-              <Button className="text-red-500 hover:text-red-800 hover:cursor-pointer flex w-52">
-                <DeleteOutlined className="absolute top-10 right-4 hover:text-red-500" />
+              <Button
+                onClick={(e) => handleDelete(e, user.id)}
+                className="text-red-500 hover:text-red-800 hover:cursor-pointer flex w-52"
+              >
                 Eliminar
               </Button>
             }
