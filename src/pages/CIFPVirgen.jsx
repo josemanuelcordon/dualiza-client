@@ -1,7 +1,10 @@
+import ElectricConsumeCIFPVirgen from "./ResultObtains/ElectricConsumeCIFPVirgen"
 
 const CIFPVirgen = () => {
   return (
-    <div>CIFPVirgen</div>
+    <>
+        <ElectricConsumeCIFPVirgen />
+    </>
   )
 }
 

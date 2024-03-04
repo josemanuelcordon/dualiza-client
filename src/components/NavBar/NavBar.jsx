@@ -13,27 +13,20 @@ export const NavBar = () => {
         </Link>
 
         {/* Resultados obtenidos */}
-        <div className="relative group">
           <Link
             to="/resultadosobtenidos"
             className="text-white px-4 py-2 hover:text-colorOrangeHover"
           >
             Resultados obtenidos
           </Link>
-          
-        </div>
 
         {/* Mejora tu centro */}
-        <div className="relative group">
           <Link
             to="/mejoracentro"
             className="text-white px-4 py-2 hover:text-colorOrangeHover"
           >
             Mejora tu centro
           </Link>
-
-          
-        </div>
 
         {/* Noticias */}
         <Link
