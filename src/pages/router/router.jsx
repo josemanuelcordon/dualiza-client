@@ -10,6 +10,7 @@ import New from "../New";
 import CreateUser from "../CreateUser";
 import UserList from "../UserList";
 import ImproveCenter from "../ImproveCenter";
+import ProtectedRoute from "../../utils/ProtectedRoute";
 
 export const router = createBrowserRouter([
   {
@@ -28,10 +29,14 @@ export const router = createBrowserRouter([
       { path: "/noticia", element: <New /> },
       { path: "/resultadosobtenidos", element: <ResultObtained /> },
       { path: "/mejoracentro", element: <ImproveCenter /> },
-      { path: "/create/new", element: <CreateNew /> },
-      { path: "/create/user", element: <CreateUser /> },
-      { path: "/list/users", element: <UserList /> },
-
+      {
+        element: <ProtectedRoute redirect="/login" />,
+        children: [
+          { path: "/create/new", element: <CreateNew /> },
+          { path: "/create/user", element: <CreateUser /> },
+          { path: "/list/users", element: <UserList /> },
+        ],
+      },
     ],
   },
   {

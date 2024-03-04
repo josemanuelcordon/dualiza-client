@@ -9,9 +9,9 @@ const Footer = () => {
         <section>
           <h2 className="text-xl">Colaboradores</h2>
           <div className="flex items-center">
-            <img src="../image/riello.png" alt="" className="w-40 mr-4" />
-            <img src="../image/fpempresa.png" alt="" className="w-40 mr-4" />
-            <img src="../image/CaixaBank.png" alt="" className="w-40" />
+            <img src="../image/riello.png" alt="" className="w-52 mr-4" />
+            <img src="../image/fpempresa.png" alt="" className="w-52 mr-4" />
+            <img src="../image/CaixaBank.png" alt="" className="w-52" />
           </div>
         </section>
         <section className="flex flex-col items-end w-full">

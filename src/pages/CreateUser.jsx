@@ -32,7 +32,6 @@ const CreateUser = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log("hola");
     await createUser(state);
   }
 

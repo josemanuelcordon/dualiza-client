@@ -4,24 +4,14 @@ import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { message } from "antd";
 import { useEffect, useState } from "react";
 import { deleteNew, getNews } from "../api/usersApi";
+import formatDate from "../utils/formatDate";
 
 const News = () => {
   const { username } = useAuthContext();
   const [news, setNews] = useState([]);
   const [forceUpdate, setForceUpdate] = useState(false);
 
-  //Debe de ir en la carpeta utils
-  const formatDate = (dateNotFormatted) => {
-    const date = new Date(dateNotFormatted);
-
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear() % 100;
-
-    return `${day < 10 ? "0" : ""}${day}-${
-      month < 10 ? "0" : ""
-    }${month}-${year}`;
-  };
+ 
 
   async function handleDelete(newId) {
     const responseOk = await deleteNew(newId);
@@ -60,7 +50,7 @@ const News = () => {
               key={n.id}
               className="w-full mb-4 p-4 rounded-md flex h-56 items-center gap-8 border border-solid border-gray-300"
             >
-              {n.img && <img className="w-80 rounded-md" src={n.img} />}
+              {n.img && <img className="w-52 rounded-md" src={n.img} />}
               <div className="relative flex flex-col items-start h-full w-full ">
                 {username && (
                   <>

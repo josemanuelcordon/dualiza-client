@@ -4,9 +4,7 @@ import CIFPVirgen from "./CIFPVirgen";
 import ImrpoveConstructive from "./ResultObtains/ImrpoveConstructive";
 import { Tabs } from "antd";
 
-const onChange = (key) => {
-  console.log(key);
-};
+
 const items = [
   {
     key: "1",
@@ -36,7 +34,7 @@ const ResultObtained = () => {
       <section className="flex items-end w-full px-10 pt-20 pb-10 bg-gray-600 text-white justify-between">
         <h1 className="text-6xl text-start">Resultados obtenidos</h1>
       </section>
-      <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+      <Tabs defaultActiveKey="1" items={items} />
     </main>
 
   );
