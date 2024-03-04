@@ -13,7 +13,6 @@ import Table11 from "../components/Tables/Table11";
 import Table12 from "../components/Tables/Table12";
 import Table13 from "../components/Tables/Table13";
 import Table14 from "../components/Tables/Table14";
-import BarChart from "../components/charts/BarChart";
 
 const ResultObtained = () => {
   return (

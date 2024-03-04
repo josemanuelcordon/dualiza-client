@@ -1,4 +1,3 @@
-import React from "react";
 import { Tabs } from "antd";
 import ElectricInstallation from "../components/ElectricInstallation";
 import InterestDocuments from "../components/InterestDocuments";
