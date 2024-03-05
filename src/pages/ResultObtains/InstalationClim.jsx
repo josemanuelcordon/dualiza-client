@@ -262,6 +262,14 @@ const InstalationClim = () => {
             <Overlay>
               <ModalCard>
                 <Title>Información adicional</Title>
+                <Paragraph>
+                  La medida de mejora propuesta busca ajustar la tarifa de facturación a la demanda real 
+                  para evitar costes innecesarios. Actualmente, la comercializadora del centro es Gas Natural
+                   Fenosa y el tramo de suministro denominado TUR, RL.3, comprende de los 15.000 kWh hasta los 
+                   50.000 kWh anuales. Se considera el cambio de compañía a Total Energies, ya que ofrece precios 
+                   competitivos y una tarifa de gas más acorde a los consumos declarados para el edificio. La comparativa
+                   arroja un precio calculado de 1530 euros para el año tipo de consumo en gas natural.
+                </Paragraph>
                 <CloseButton onClick={toggleMoreInfo2}>Cerrar</CloseButton>
               </ModalCard>
             </Overlay>
@@ -276,6 +284,24 @@ const InstalationClim = () => {
             <Overlay>
               <ModalCard>
                 <Title>Información adicional</Title>
+                <Paragraph>
+                  Se recomienda aplicar un plan de mantenimiento preventivo y correctivo a los equipos de tratamiento de
+                   aire y sus recuperadores, ya que no se encuentran en óptimas condiciones, aunque no es necesario 
+                   renovarlos por equipos más modernos. 
+                </Paragraph>
+                <Paragraph>
+                  El consumo energético de los equipos de ventilación y climatización depende de las pérdidas de presión
+                   del sistema en su conjunto, y los filtros de aire tienen un papel clave en el consumo del equipo de ventilación.
+                    Es necesario limpiarlos con regularidad y cambiarlos cuando lleguen al final de su periodo de vida útil.
+                     Si el grado de suciedad es elevado, los ventiladores se verán forzados a trabajar para compensar las 
+                     pérdidas de presión adicionales, lo que repercutirá en un mayor consumo. 
+                </Paragraph>
+                <Paragraph>
+                  También se recomienda sustituir los presostatos diferenciales (DPS) deteriorados para aumentar la 
+                  eficiencia de los equipos, acompañado de las necesarias revisiones de los motores de los ventiladores 
+                  de impulsión y extracción, así como de sus filtros (G4), y la realización de las operaciones de mantenimiento 
+                  preventivas y correctivas pertinentes.
+                </Paragraph>
                 <CloseButton onClick={toggleMoreInfo3}>Cerrar</CloseButton>
               </ModalCard>
             </Overlay>
@@ -290,6 +316,17 @@ const InstalationClim = () => {
             <Overlay>
               <ModalCard>
                 <Title>Información adicional</Title>
+                <Paragraph>
+                  La solución adoptada es la instalación de sensores de movimiento o presencia para evitar que los equipos
+                   de aire acondicionado estén funcionando cuando no hay nadie usando las dependencias, y de esta manera, 
+                   controlar las consecuencias de gasto energético derivadas de los malos hábitos y el mal uso de estos equipos.
+                </Paragraph>
+                <Paragraph>
+                  En el centro sólo se dispone de 8 equipos autónomos ubicados en algunas dependencias. El sistema 
+                  elegido consta de un contactor con relé de trabajo, llamado módulo central, al que se le une mediante
+                   bluetooth, un detector de presencia instalado de forma cenital y que ha sido tasado por la empresa 
+                   suministradora de material ACTUM.
+                </Paragraph>
                 <CloseButton onClick={toggleMoreInfo4}>Cerrar</CloseButton>
               </ModalCard>
             </Overlay>
@@ -304,6 +341,26 @@ const InstalationClim = () => {
             <Overlay>
               <ModalCard>
                 <Title>Información adicional</Title>
+                <Paragraph>
+                  La sala de Rack donde se ubican los recursos informáticos y electrónicos que dan soporte a la red del
+                   centro necesitan unas condiciones de temperatura entre 18ªC y 27ºC por lo que se encuentra permanentemente
+                    climatizada por un equipo de AC. 
+                </Paragraph>
+                <Paragraph>
+                  Se ha comprobado que tiene una tecnología antigua e ineficiente, y por ello, se propone su sustitución
+                   por un equipo nuevo partido de AC Mitsubishi MSZ-HR 25 VF con tecnología INVERTER y calificación 
+                   energética A++ en refrigeración y A+++ en calefacción. La tecnología INVERTER evita los picos de arranque 
+                   mediante variadores de frecuencia, suponiendo un ahorro del 60% de energía con respecto a la tecnología anterior
+                </Paragraph>
+                <Paragraph>
+                  También se propone, en lugar de su sustitución por un equipo nuevo, la permuta con el equipo de la 
+                  sala de archivo de secretaría que actualmente tiene poco uso y tiene mejores prestaciones energéticas,
+                   y que trabaja con el mismo refrigerante y sus potencias son similares. Esta propuesta tendría un ahorro 
+                   importante en el coste de material y además también en mano de obra, ya que podría plantearse como una práctica 
+                   de taller con el alumnado del GS de Mantenimiento de instalaciones térmicas y de fluidos, con la supervisión 
+                   del equipo docente.Es altamente recomendable llevar a cabo algunas de estas dos medidas, ya que este equipo
+                    de AC es el mayor consumidor de las instalaciones de refrigeración en el centro.
+                </Paragraph>
                 <CloseButton onClick={toggleMoreInfo5}>Cerrar</CloseButton>
               </ModalCard>
             </Overlay>
@@ -316,6 +373,16 @@ const InstalationClim = () => {
             <Overlay>
               <ModalCard>
                 <Title>Información adicional</Title>
+                <Paragraph>
+                  Se propone la instalación de energía solar térmica como apoyo de la calefacción. Los equipos elegidos son 
+                  4 captadores de la marca Escosol de 2,23 m2 y capacidad de 170 l y un depósito acumulador de 750 l y 
+                  temperatura de trabajo de 90ºC.
+                </Paragraph>
+                <Paragraph>
+                  Con esta medida se consigue una mejora en la calificación energética del edificio pasando del rango B
+                   al rango A, ya que las emisiones bajarán hasta los 29kg CO2/m2año, y el consumo de energía primaria no 
+                   renovable también disminuiría hasta los 145,1 kwh/m2año, tal y como se indica en el certificado energético del edificio.
+                </Paragraph>
                 <CloseButton onClick={toggleMoreInfo6}>Cerrar</CloseButton>
               </ModalCard>
             </Overlay>
@@ -328,6 +395,18 @@ const InstalationClim = () => {
             <Overlay>
               <ModalCard>
                 <Title>Información adicional</Title>
+                <Paragraph>
+                  Se propone instalar detectores de presencia que permitan encender y apagar el sistema de iluminación
+                   de cada estancia de forma automática, según el nivel de iluminación existente y la presencia de personas. 
+                    Además, se propone instalar en el sistema de iluminación, lámparas de tecnología LED en aquellas estancias
+                     donde no se haya sustituido aún por lámparas de otra tecnología.
+                </Paragraph>
+                <Paragraph>
+                  Otra medida propuesta consiste en programar los ordenadores para que se apaguen de forma automática cuando finalice 
+                  el horario lectivo, para evitar olvidos en los que el ordenador se queda encendido. Con el mismo fin, se propone
+                   reducir el tiempo de inactividad de los equipos, activando la suspensión o hibernación del ordenador transcurrido 
+                   un determinado tiempo en el que no se está usando.
+                </Paragraph>                
                 <CloseButton onClick={toggleMoreInfo7}>Cerrar</CloseButton>
               </ModalCard>
             </Overlay>

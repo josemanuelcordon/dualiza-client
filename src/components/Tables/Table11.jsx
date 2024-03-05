@@ -102,6 +102,7 @@ const data = [
 
 const Table11 = () => (
   <>
+  <h2 className="text-m font-semibold p-4">Cuadro electrico 1</h2>
     <Table columns={columns} dataSource={data} pagination={false} />
   </>
 );

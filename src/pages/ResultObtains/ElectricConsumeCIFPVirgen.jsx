@@ -6,6 +6,10 @@ import Table4 from "../../components/Tables/Table4";
 import Table8 from "../../components/Tables/Table8";
 import Table9 from "../../components/Tables/Table9";
 import Table10 from "../../components/Tables/Table10";
+import Table11 from "../../components/Tables/Table11";
+import Table12 from "../../components/Tables/Table12";
+import Table13 from "../../components/Tables/Table13";
+import Table14 from "../../components/Tables/Table14";
 
 const GridHLanz = styled.div`
   display: grid;
@@ -107,6 +111,35 @@ const ElectricConsumeCIFPVirgen = () => {
           <Table8 />
           <Table9 />
           <Table10 />
+        </div>
+      </div>
+
+      {/* Table11 , Table12 , Table13 */}
+      <div className="col-span-2 max-w-full bg-white shadow-md rounded-md overflow-hidden">
+        <h2 className="text-lg font-semibold p-4">
+          Consumo y coste anual de la energía eléctrica para cada cuadro eléctrico
+        </h2>
+        <div className="p-4">
+          <Table11 />
+          <Table12 />
+          <Table13 />
+        </div>
+      </div>
+
+      {/* Table14 */}
+      <div className="col-span-2 max-w-full bg-white shadow-md rounded-md overflow-hidden">
+        <h2 className="text-lg font-semibold p-4">Consumo y coste eléctrio anual global</h2>
+        <Paragraph>
+          La distribución de consumos muestra un consumo variable a lo largo del año, en función del uso de la calefacción, 
+          siendo éste el más significativo y variable a lo largo del año. Se observa una mayor demanda de energía eléctrica
+           durante los meses de invierno. El consumo medio mensual en el cuadro 1 se estima en 1.752,17 kWh, el coste medio
+            mensual en 831,51 € y la ratio económica del precio de la energía sería de 0,47 €/kWh. El consumo medio mensual
+             en el cuadro 2 se estima en 1.102,83 kWh, el coste medio mensual en 499,76 € y la ratio económica del precio de 
+             la energía sería de 0,45 €/kWh. El consumo medio mensual en el cuadro 3 se estima en 3.031,67 kWh, el coste medio
+              mensual en 1.290,45 € y la ratio económica del precio de la energía sería de 0,42 €/kWh. 
+        </Paragraph>
+        <div className="p-4">
+          <Table14 />
         </div>
       </div>
     </GridHLanz>
