@@ -5,11 +5,11 @@ const Footer = () => {
   const { username, logout, isAdmin } = useAuthContext();
   return (
     <footer className="bg-customBlueSecundary h-40 py-6 ">
-      <div className="flex justify-start max-w-7xl mx-auto">
+      <div className="flex justify-start max-w-7xl mx-auto h-full">
         <section>
           <h2 className="text-xl">Colaboradores</h2>
           <div className="flex items-center">
-            <img src="../image/riello.png" alt="" className="w-52 mr-4" />
+            <img src="../image/riello.png" alt="" className="w-52 mr-4 h-24" />
             <img src="../image/fpempresa.png" alt="" className="w-52 mr-4" />
             <img src="../image/CaixaBank.png" alt="" className="w-52" />
           </div>
